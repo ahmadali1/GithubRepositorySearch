@@ -4,17 +4,24 @@
     <h4 class="text-center">Sorry, No repository found!</h4>
   <% else %>
     <div class="list-group">
-      <%= render partial: 'pagination' %>
+      <div class="row">
+        <div class="col-md-8">
+          <%= render partial: 'pagination' %>
+        </div>
+        <div class="col-md-4 text-right">
+          <%= repos['total_count'] %> Repositories Found
+        </div>
 
-      <% rows.each do |repo| %>
-        <a href="<%= repo[:url] %>" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1"><%= repo[:name] %></h5>
-            <small><%= repo[:stars] %> stars</small>
-          </div>
-          <p class="mb-1"><%= repo[:description] %></p>
-        </a>
-      <% end %>
+        <% rows.each do |repo| %>
+          <a href="<%= repo[:url] %>" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1"><%= repo[:name] %></h5>
+              <small><%= repo[:stars] %> stars</small>
+            </div>
+            <p class="mb-1"><%= repo[:description] %></p>
+          </a>
+        <% end %>
+      </div>
     </div>
   <% end %>
 <% else %>

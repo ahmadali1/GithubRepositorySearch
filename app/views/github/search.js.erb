@@ -1,1 +1,5 @@
-$('#repo-secion').html("<%= escape_javascript(render partial: 'results', locals: { repos: @repos }) %>")
+<% if @error %>
+$('#repo-secion').html("<h3 class='text-danger'>Sorry, can't fetch results due to some error!<h3><p>Error: <%= @error %></p>")
+<% else %>
+  $('#repo-secion').html("<%= escape_javascript(render partial: 'results', locals: { repos: @repos }) %>")
+<% end %>
