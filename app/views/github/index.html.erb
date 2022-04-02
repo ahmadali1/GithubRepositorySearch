@@ -1,0 +1,22 @@
+<div class='row'>
+  <div class='col-md-12'>
+
+    <%= form_tag(search_path, method: :get, remote: true, id: 'search-form') do %>
+      <%= hidden_field_tag :page, @page || 1 %>
+
+      <div class='input-group mb-3'>
+        <%= text_field_tag :query, params[:query], placeholder: 'Please input repo name to search', class: 'form-control', required: true %>
+        <div class='input-group-append'>
+          <%= submit_tag 'Search', class: 'btn btn-primary', id: 'submit-search' %>
+        </div>
+      </div>
+    <% end %>
+
+    <div id='repo-secion'>
+      <div class='text-center d-none' id='loader'>
+        <h4>Fetching results from github ...</h4>
+        <%= image_tag 'loading.gif', class: 'text-center' %>
+      </div>
+    </div>
+  </div>
+</div>
