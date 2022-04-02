@@ -1,24 +1,6 @@
-# README
+# Github Repo Search Engine
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Minimal RoR based application that utilizes github public api to search repositories by name.
 
-Things you may want to cover:
+https://user-images.githubusercontent.com/86788260/161398992-6a82026e-9973-4e07-b937-dc8ef2c04492.mov
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
